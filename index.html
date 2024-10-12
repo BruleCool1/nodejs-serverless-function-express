@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chromium Output</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        fetch('/api/runScript')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('output').textContent = data.output;
+            });
+    </script>
+</body>
+</html>
