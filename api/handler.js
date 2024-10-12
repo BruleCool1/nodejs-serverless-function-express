@@ -15,6 +15,6 @@ exports.handler = async (req, res) => {
     });
 
     childProcess.on('close', (code) => {
-        res.status(200).send(`<html><body>${output}</body></html>`);
+        res.status(200).send(`<html><body>${output}</body></html>`); // Send generated HTML
     });
 };
